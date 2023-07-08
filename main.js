@@ -1,4 +1,16 @@
 $(document).ready(function() {
-    document.querySelector(`header button`)
-    $(`header button`)
+    $('header button').click(function(){
+        $('form').slideDown()
+    })
+
+    $('#botao-cancelar').click(function(){
+        $('form').slideUp()
+    })
+    
+
+    $('form').on('submit', function(e){
+        alert('submit')
+        e.preventDefault()
+    })
+        
 })
